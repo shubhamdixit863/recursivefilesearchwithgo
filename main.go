@@ -97,6 +97,8 @@ func main() {
 	go func() {
 		defer wg.Done()
 		for elem := range channel {
+			// Searches for hello string in the files in the folder and in the nested folder
+			// Create folder or files inside the demo folder and search for any text you want
 			SearchForContentInfile(elem, "hello")
 		}
 
